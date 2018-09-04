@@ -32,7 +32,6 @@ function createTestLink(){
     var cell = ss.getRange(i, currentCol);
     
     if (cellContent  === "" || cellContent === null) {
-      //var cell = ss.getRange(i, currentCol);
       cell.setValue("Cell Empty");
       cell.setFontColor("red");
       
