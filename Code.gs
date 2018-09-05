@@ -14,18 +14,18 @@ function showDialog() {
 }
 
 var gDriveEla = DriveApp.getFoldersByName("Coding")
-                     .next()
-                     .getFoldersByName("State Testing Links")
-                     .next()
-                     .getFoldersByName("ELA")
-                     .next();
+                        .next()
+                        .getFoldersByName("State Testing Links")
+                        .next()
+                        .getFoldersByName("ELA")
+                        .next();
 
 var gDriveMath = DriveApp.getFoldersByName("Coding")
-                     .next()
-                     .getFoldersByName("State Testing Links")
-                     .next()
-                     .getFoldersByName("MATH")
-                     .next();
+                         .next()
+                         .getFoldersByName("State Testing Links")
+                         .next()
+                         .getFoldersByName("MATH")
+                         .next();
 
 function createTestLink(){
   
