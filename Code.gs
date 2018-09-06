@@ -14,22 +14,23 @@ function showDialog() {
 }
 
 var gDriveEla = DriveApp.getFoldersByName("Coding")
-                     .next()
-                     .getFoldersByName("State Testing Links")
-                     .next()
-                     .getFoldersByName("ELA")
-                     .next();
+                        .next()
+                        .getFoldersByName("State Testing Links")
+                        .next()
+                        .getFoldersByName("ELA")
+                        .next();
 
 var gDriveMath = DriveApp.getFoldersByName("Coding")
-                     .next()
-                     .getFoldersByName("State Testing Links")
-                     .next()
-                     .getFoldersByName("MATH")
-                     .next();
+                         .next()
+                         .getFoldersByName("State Testing Links")
+                         .next()
+                         .getFoldersByName("MATH")
+                         .next();
 
 function createTestLink(){
   
-  var ss = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  var gSheet = SpreadsheetApp.getActiveSpreadsheet();
+  var ss = gSheet.getActiveSheet();
   var activeSheet = ss.getSheetName();
   var currentRow = ss.getCurrentCell().getRow();
   var lastRow = ss.getLastRow();
@@ -58,6 +59,7 @@ function createTestLink(){
       }
     } 
   }
+  gSheet.toast("Link Process Complete");
 }
 
 //Returns boolean if parameter passed combined with the .tif extension file type is found in the specified folder
